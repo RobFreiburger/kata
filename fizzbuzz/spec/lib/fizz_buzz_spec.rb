@@ -1,3 +1,5 @@
+require 'fizz_buzz'
+
 describe FizzBuzz do
 
 	it "should handle lack of input" do
@@ -42,6 +44,10 @@ describe FizzBuzz do
 
 	it "should handle both fizz and buzz" do
 	  FizzBuzz.new(15).play.should == "1,2,fizz,4,buzz,fizz,7,8,fizz,buzz,11,fizz,13,14,fizzbuzz"
+	end
+
+	it "should return nothing if it isn't a number we have counted to" do
+	  FizzBuzz.new(10).at(11).should == ""
 	end
 
 	it "should calculate the 100th number" do
