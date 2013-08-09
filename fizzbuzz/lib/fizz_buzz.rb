@@ -1,7 +1,7 @@
 class FizzBuzz
 
 	def initialize(count)
-		if count.is_a? Integer && count >= 1
+		if count.is_a?(Integer)
 			@count = count
 		end
 		@results = []
@@ -27,8 +27,8 @@ class FizzBuzz
 	def calculate
 		if @count
 
-			1.upto @count do |i|
-				result = nil
+			1.upto(@count) do |i|
+				result = ''
 
 				if is_fizz(i)
 					result += 'fizz'
@@ -38,7 +38,7 @@ class FizzBuzz
 					result += 'buzz'
 				end
 
-				if result.nil?
+				if result.empty?
 					result = i.to_s
 				end
 
